@@ -149,7 +149,7 @@ export default function Extra() {
                 {/* Right Column - Role Info */}
                 <div className="text-zinc-300 body font-normal space-y-3">
                   <span className="block">As Student Exchange Researcher/ Designer In ICD Lab, Tohoku University Japan</span>
-                  <span className="block">India - Japan Lotus Research Fellow</span>
+                  <span className="block"><TextLink link="https://www.jst.go.jp/program/india/en/outline/">India - Japan Lotus Research Fellow</TextLink></span>
                   <span className="block">Topic : AI In VR ( Files & Data Retrieval )</span>
                 </div>
               </div>
