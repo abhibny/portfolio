@@ -140,6 +140,38 @@ export default function Extra() {
           <br></br>
 
         </section>
+
+        {/* DIVIDER */}
+        <section className="grid-layout mt-1 mb-4">
+          <div className="col-start-1 col-end-13 h-px bg-white/20" />
+        </section>
+
+        {/* CURRENTLY SECTION */}
+        <section className="mt-6 mb-2 grid-layout">
+          <div className="flex flex-col col-start-1 col-end-13 gap-3 md:col-end-7">
+            <p
+              className={`col-start-1 col-end-13 mb-4 text-zinc-300 body font-normal z-1000 md:col-start-1 md:col-span-5 md:mb-0`}
+            >
+              <span className="text-yellow-300 uppercase block mb-4 text-lg">Currently At</span>
+              <span className="block mb-4">As Student Exchange Researcher/ Designer In ICD Lab, Tohoku University Japan</span>
+              <span className="block mb-4">India - Japan Lotus Research Fellow</span>
+              <span className="block">Topic : AI In VR ( Files & Data Retrieval )</span>
+            </p>
+          </div>
+          <div className="grid grid-cols-6 col-start-1 col-end-13 gap-3 md:col-start-7">
+            <p className="col-span-6 text-zinc-300 body font-normal">
+              <span className="block mb-4 text-yellow-300"><TextLink link="https://www.icd.riec.tohoku.ac.jp/en/">Interactive Content Design Lab</TextLink></span>
+              <span className="block text-sm mb-4">インタラクティブコンテンツ</span>
+              <span className="block mb-2">Under : Prof. Yoshifumi KITAMURA</span>
+              <span className="block text-sm">北村 喜文</span>
+            </p>
+          </div>
+
+          <br></br>
+          <br></br>
+
+        </section>
+
         {sections.map((section, sectionIndex) => (
           <React.Fragment key={section.title}>
             <section
