@@ -239,17 +239,8 @@ export default function Home() {
 
         </section>
 
-        {/* FOOTER */}
         <footer className="text-center text-gray-400 mt-16 md:mt-20 py-10 border-t border-gray-200 text-xs">
           <p>© 2026 Crafted by Abhishek</p>
-          <p className="mt-2">
-            <a href="mailto:abhishekbenny98@gmail.com" className="hover:text-gray-600">abhishekbenny98@gmail.com</a>
-          </p>
-          <p className="mt-4 font-semibold">
-            <a href="https://www.linkedin.com/in/abhibny/" className="hover:text-gray-600">LinkedIn</a> • 
-            <a href="https://www.instagram.com/greeenpoints/" className="hover:text-gray-600"> Instagram</a> • 
-            <a href="https://x.com/shawarmawomayo" className="hover:text-gray-600"> Twitter</a>
-          </p>
         </footer>
 
       </div>
