@@ -120,7 +120,7 @@ export default function Home() {
 
           <div>
             <p className="text-2xl md:text-3xl font-light mb-16">
-              Hi there, I'm <span className="font-semibold">Abhishek</span>
+              Hi there, I&apos;m <span className="font-semibold">Abhishek</span>
             </p>
 
             <div>
@@ -222,11 +222,11 @@ export default function Home() {
           <div className="col-span-12 md:col-span-7 bg-gray-50 rounded-2xl p-8 md:p-12 flex flex-col justify-between">
             <div>
               <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
-                Let's chat about Art, GenAI, or chai
+                Let&apos;s chat about Art, GenAI, or chai
               </h2>
 
               <p className="mt-4 text-gray-600">
-                I'd love to <span className="font-semibold">connect and explore</span> ideas together.
+                I&apos;d love to <span className="font-semibold">connect and explore</span> ideas together.
               </p>
             </div>
 
