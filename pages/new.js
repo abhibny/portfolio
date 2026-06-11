@@ -142,11 +142,19 @@ export default function Home() {
             </h1>
 
             <div>
-              <p className="text-gray-400 text-sm mb-3">Currently</p>
-              <div className="space-y-1 text-sm">
-                <p>IDC, IIT Bombay</p>
-                <p>Tohoku University, Japan</p>
-                <p>Interaction Design</p>
+              <p className="text-gray-400 text-sm mb-3">Currently At</p>
+              <div className="text-sm space-y-3">
+                <div>
+                  <a href="https://www.idc.riec.tohoku.ac.jp/en/" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-gray-600">Interactive Content Design Lab</a>
+                  <p className="text-gray-400">インタラクティブコンテンツ</p>
+                  <p>Under: Prof. Yoshifumi KITAMURA</p>
+                  <p className="text-gray-400">北村 喜文</p>
+                </div>
+                <div className="space-y-1">
+                  <p>Student Exchange Researcher / Designer, ICD Lab, Tohoku University, Japan</p>
+                  <a href="https://www.jst.go.jp/program/india/en/outline/" target="_blank" rel="noopener noreferrer" className="block hover:text-gray-600">India – Japan Lotus Research Fellow</a>
+                  <p>Topic: AI in VR (Files & Data Retrieval)</p>
+                </div>
               </div>
             </div>
           </div>
