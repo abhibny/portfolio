@@ -248,7 +248,7 @@ export default function Home() {
         </section>
 
         <footer className="text-center text-gray-400 mt-16 md:mt-20 py-10 border-t border-gray-200 text-xs">
-          <p>© 2026 Crafted by Abhishek</p>
+          <p>Things that I love / 2026 / wip</p>
         </footer>
 
       </div>
