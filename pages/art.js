@@ -1,125 +1,28 @@
-import ProjectCard from '../components/home/ProjectCard';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import GridContainer from '../components/GridContainer';
-import Skiff from '../public/project-covers/skiff.jpg';
-import Compose from '../public/work/skiff/compose-modal.jpg';
-import Brain from '../public/project-covers/natural.jpg';
-import Azuki from '../public/project-covers/azuki.jpg';
-import CollectorStatus from '../public/project-covers/collector-status.jpg';
-import Cursor from '../public/project-covers/cursor.jpg';
-import AIGA from '../public/project-covers/aiga-square.jpg';
-import Metalink from '../public/project-covers/metalink.jpg';
-import SkiffIcons from '../public/project-covers/skiffIcons.jpg';
-import Experiments from '../public/work/experiments/LE-1.jpg';
-import FormatBar from '../public/work/skiff/format-bar.jpg';
-import NeydhalCover from '../public/project-covers/123.jpg';
+import ProjectTitle from '../components/projects/ProjectTitle';
+import ProjectBody from '../components/projects/ProjectBody';
+import TextLink from '../components/TextLink';
 
-import Plane from '../public/project-covers/plane.jpg';
-
-const gapValue = 'gap-6';
-
+// The previous version of this page showed cards inherited from the
+// portfolio-v4 template (Skiff, Azuki, AIGA, Metalink and others) that
+// linked to routes which no longer exist. Rebuilt as a stub pending
+// Abhishek's own art archive; the v5 version lives at /v5/art.
 export default function Art() {
   return (
-    <main>
-      <GridContainer>
-        {/* Section label for projects */}
-        <section className="grid-layout mt-4 mb-1">
-          <p className="col-start-1 col-end-13 text-yellow-300 uppercase body md:col-start-1 md:col-span-5">ART Projects</p>
-        </section>
-        {/* Breaker line after About matching navbar */}
-        <section className="grid-layout mt-1 mb-4">
-          <div className="col-start-1 col-end-13 h-px bg-white/10" />
-        </section>
-  <div className="grid grid-cols-1 relative z-10 col-start-1 col-end-13 md:grid-cols-4 grid-gap">
-
-          {/* COLUMN 1 */}
-          <div className={`flex flex-col ${gapValue}`}>
-            <ProjectCard
-              title="BookWorm Pavilion"
-              description="Nudes Studio"
-              link="/skiff"
-              content={Skiff}
-            /> {/*
-            <ProjectCard
-              title="Brain Technologies"
-              description="Conversational AI"
-              link="/brain"
-              content={Brain}
-            /> */}
-            {/*
-             <ProjectCard
-              title="Multimodal Search"
-              description="Brain Technologies"
-              link="/brain"
-              isVideo
-              content={'/project-covers/brain-nested-query.mp4'}
-            />   */}
-            <ProjectCard
-              title="Neydhal"
-              description="Exhibition along with KMB 2023"
-              link="/apple"
-              content={NeydhalCover}
-            />
-          </div>
-
-          {/* COLUMN 2 */}
-          <div className={`flex flex-col ${gapValue}`}>
-            <ProjectCard
-              title="Data is the new ART"
-              link="/data"
-              description="Wanna do research in this"
-              locked
-              content={Plane}
-            /> 
-            {/* Any other column 2 cards */}
-          </div>
-
-          {/* COLUMN 3 */}
-          <div className={`flex flex-col ${gapValue}`}>
-            {/*
-            <ProjectCard
-              title="Pixel Push"
-              description="Multiplayer Art"
-              link="/pixelpush"
-              isVideo
-              content={'/project-covers/pixel-push.mp4'}
-            />
-            
-            <ProjectCard
-              title="Azuki"
-              description="Media Interfaces"
-              link="/azuki"
-              content={Azuki}
-            />
-            */}
-            <ProjectCard
-              title="City of 2140 : New York"
-              description="Architectural Thesis Project"
-              link="/city"
-              isVideo
-              content={'/project-covers/thinkspace.mp4'}
-            />
-            {/*
-            <ProjectCard
-              title="Metalink Labs"
-              description="Design systems"
-              link="/metalink"
-              content={Metalink}
-            ></ProjectCard>
-            */}
-          </div>
-
-          {/* COLUMN 4 */}
-          <div className={`${gapValue} flex flex-col`}>
-            <ProjectCard
-              title="Velammal Project"
-              description="Architectural Modularity"
-              link="/aiga"
-              content={AIGA}
-            />
-          </div>
-        </div>
+    <motion.main className="min-h-[70vh] pt-6 md:pt-8">
+      <GridContainer className="gap-y-8">
+        <ProjectTitle role="Personal practice">Art</ProjectTitle>
+        <ProjectBody>
+          A running archive of personal work — image, form and material. This
+          page is being rebuilt; in the meantime the current selection lives on{' '}
+          <TextLink link="https://www.instagram.com/greeenpoints/">
+            Instagram
+          </TextLink>
+          .
+        </ProjectBody>
       </GridContainer>
-    </main>
+    </motion.main>
   );
 }

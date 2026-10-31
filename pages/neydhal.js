@@ -44,7 +44,7 @@ export default function Neydhal() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero isVideo={true} content="/project-covers/apple.mp4" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Exhibition along with KMB 2023">Neydhal</ProjectTitle>
         <ProjectBody col={2}>
         Neydhal is a photographic exhibition showcasing the lives of Chennai&apos;s 

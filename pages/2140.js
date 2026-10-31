@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero isVideo={true} content="/project-covers/thinkspace.mp4" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Architectural Thesis Project">City of 2140 : New York</ProjectTitle>
         <ProjectBody col={2}>
         Inspired by Kim Stanley Robinson’s New York 2140, this project reimagines 

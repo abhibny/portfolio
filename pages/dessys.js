@@ -9,7 +9,7 @@ export default function Dessys() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/project-covers/metalink.jpg" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Design systems">Design Sys</ProjectTitle>
         <ProjectBody col={2}>
           Notes and patterns from building robust, scalable design systems.

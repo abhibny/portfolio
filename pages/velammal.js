@@ -48,7 +48,7 @@ export default function Velammal() {
   return (
     <main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero isVideo={false} content="/project-covers/aiga.jpg" />
+        <ProjectHero isVideo={false} content="/placeholder.svg" />
         <ProjectTitle role="Architectural Modularity">
           Velammal Project
         </ProjectTitle>

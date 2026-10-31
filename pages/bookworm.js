@@ -8,26 +8,27 @@ import ProjectTitle from '../components/projects/ProjectTitle';
 import ProjectDetails from '../components/projects/ProjectDetails';
 import ProjectMedia from '../components/projects/ProjectMedia';
 import Spacer from '../components/projects/Spacer';
+import LinkCard from '../components/projects/LinkCard';
 
 // images
-import AppSwitcher from '../public/work/skiff/app-switcher.jpg';
-import Mail from '../public/work/skiff/mail.jpg';
-import Compose from '../public/work/skiff/compose-modal.jpg';
-import Icons from '../public/work/skiff/icons.png';
-import MarketingCards from '../public/work/skiff/marketing-cards.png';
-import MarketingCards2 from '../public/work/skiff/marketing-cards-2.jpg';
-import MarketingLanding from '../public/work/skiff/marketing-landing.jpg';
-import AppLogos from '../public/work/skiff/app-logos.jpg';
-import Onboarding from '../public/work/skiff/onboarding.jpg';
-import MobileMail1 from '../public/work/skiff/mobile-mail-1.png';
-import MobileMail2 from '../public/work/skiff/mobile-mail-2.png';
+import AppSwitcher from '../public/placeholder.svg';
+import Mail from '../public/placeholder.svg';
+import Compose from '../public/placeholder.svg';
+import Icons from '../public/placeholder.svg';
+import MarketingCards from '../public/placeholder.svg';
+import MarketingCards2 from '../public/placeholder.svg';
+import MarketingLanding from '../public/placeholder.svg';
+import AppLogos from '../public/placeholder.svg';
+import Onboarding from '../public/placeholder.svg';
+import MobileMail1 from '../public/placeholder.svg';
+import MobileMail2 from '../public/placeholder.svg';
 
 export default function Bookworm() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero isVideo={false} content="/project-covers/skiff.jpg" />
         <ProjectTitle role="Nudes Studio">BookWorm Pavilion</ProjectTitle>
+        <div className="col-span-full md:col-end-4 md:sticky md:top-[5em] text-zinc-100"></div>
         <ProjectBody col={2}>
           The BookWorm Pavilion project, under Nudes Studio, Mumbai led by {' '}
           <TextLink link="https://www.instagram.com/nurukarim/?hl=en">
@@ -56,6 +57,16 @@ export default function Bookworm() {
           duration="2019"
           tools={['Grasshopper', 'Rhino 3D']}
         />
+        <LinkCard
+          col={1}
+          link="https://www.dezeen.com/2019/12/26/wooden-book-worm-nudes-pavilion-architecture-mumbai/"
+        >
+          BookWorm on Dezeen
+        </LinkCard>
+        <LinkCard col={2} link="https://www.archdaily.com/965307/bookworm-pavilion-nudes">
+          {`BookWorm on ArchDaily`}
+        </LinkCard>
+        <Spacer />
         <ProjectBody title="Design Process">
         The  {' '}
           <TextLink link="https://www.architectural-review.com/awards/ar-public/bookworm-in-mumbai-india-by-nudes">

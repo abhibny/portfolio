@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Image pending">
+  <rect width="1280" height="720" fill="#141414"/>
+  <rect x="1" y="1" width="1278" height="718" fill="none" stroke="#2e2e2e" stroke-width="2" stroke-dasharray="10 8"/>
+  <g fill="#5a5a5a" font-family="IBM Plex Sans, ui-sans-serif, system-ui, sans-serif">
+    <text x="640" y="360" font-size="30" font-weight="500" text-anchor="middle">Image pending</text>
+    <text x="640" y="400" font-size="19" text-anchor="middle" fill="#3f3f3f">drop the final asset in to replace this</text>
+  </g>
+</svg>

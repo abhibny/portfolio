@@ -1,8 +1,9 @@
 import '../styles/globals.scss';
+import '../styles/v5.scss';
 import Page from '../components/Page';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -21,8 +22,13 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
+  // /v5 routes render their own shell (light-first design system),
+  // so they bypass the legacy black <Page> wrapper entirely.
+  const isV5 = router.pathname.startsWith('/v5');
+  const Shell = isV5 ? React.Fragment : Page;
+
   return (
-    <Page>
+    <Shell>
       <Component {...pageProps} />
 
       {/* Google Analytics */}
@@ -42,7 +48,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-    </Page>
+    </Shell>
   );
 }
 

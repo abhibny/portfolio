@@ -9,7 +9,7 @@ export default function VR() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/project-covers/plane.jpg" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Experiential explorations">VR</ProjectTitle>
         <ProjectBody col={2}>
           VR/AR explorations and interactive spatial experiments.

@@ -9,7 +9,7 @@ export default function Techniques() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/work/experiments/LE-1.jpg" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Process & methods">Techniques</ProjectTitle>
         <ProjectBody col={2}>
           Explorations, process notes, and method experiments across projects.

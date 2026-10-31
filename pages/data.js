@@ -10,20 +10,20 @@ import ProjectHero from '../components/projects/ProjectHero';
 import ProjectBody from '../components/projects/ProjectBody';
 import ProjectTitle from '../components/projects/ProjectTitle';
 import ProjectDetails from '../components/projects/ProjectDetails';
-import listAssignee from '../public/work/plane/list-assignee-cropped.jpg';
-import table from '../public/work/plane/table-cropped.jpg';
-import kanban from '../public/work/plane/kanban-cropped.jpg';
-import timeline from '../public/work/plane/timeline-cropped.jpg';
-import calendar from '../public/work/plane/calendar-cropped.jpg';
-import displaySort from '../public/work/plane/display-sort.jpg';
-import displayFilter from '../public/work/plane/display-filter.jpg';
-import filters from '../public/work/plane/filters.jpg';
+import listAssignee from '../public/placeholder.svg';
+import table from '../public/placeholder.svg';
+import kanban from '../public/placeholder.svg';
+import timeline from '../public/placeholder.svg';
+import calendar from '../public/placeholder.svg';
+import displaySort from '../public/placeholder.svg';
+import displayFilter from '../public/placeholder.svg';
+import filters from '../public/placeholder.svg';
 
 export default function Data() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/project-covers/plane.jpg" />
+        <ProjectHero content="/placeholder.svg" />
         <ProjectTitle role="Wanna do research in this">Data is the new ART</ProjectTitle>
         <ProjectBody col={2}>
         &ldquo;NewsScape: The World Through Art&ldquo; is an upcoming AI-driven initiative that 
