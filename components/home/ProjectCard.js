@@ -42,7 +42,20 @@ export default function ProjectCard({ isVideo = false, ...props }) {
         )}
       </div>
 
-      <div className="mt-3">
+      <div className={props.detailed ? 'project-details' : 'mt-3'}>
+        {props.detailed ? (
+          <>
+            <h2 className="project-heading">
+              <span className="project-title">{props.title}</span>
+              {props.description && <span className="project-subtitle">{' - '}{props.description}</span>}
+            </h2>
+            {props.tags?.length > 0 && (
+              <ul className="project-tags" aria-label="Project tags">
+                {props.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              </ul>
+            )}
+          </>
+        ) : (
         <div className="caption flex items-center gap-2 whitespace-nowrap overflow-hidden min-w-0 text-sm md:text-base">
           <span className="text-zinc-50 truncate normal-case leading-tight">{props.title}</span>
           {props.description && (
@@ -52,12 +65,67 @@ export default function ProjectCard({ isVideo = false, ...props }) {
             </span>
           )}
         </div>
+        )}
         {props.locked && (
           <p className="caption absolute text-neutral-100 rounded-md right-4 top-4 px-2 z-10 py-1 bg-gray-800 shadow-xl">
             WIP
           </p>
         )}
       </div>
+      <style jsx>{`
+        /* 01A caption measurements are relative to its 579.319px tile. */
+        .project-details {
+          /* Figma: 15px after the image and after the text, no empty text row. */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2.589246cqw;
+          margin-top: 2.589246cqw;
+          font-family: 'IBM Plex Sans', sans-serif;
+          text-align: left;
+        }
+
+        .project-heading {
+          width: 63%;
+          font-size: max(12px, 3.279711cqw);
+          line-height: 1.315789;
+          color: #fff;
+          overflow-wrap: anywhere;
+        }
+
+        .project-title {
+          font-weight: 700;
+        }
+
+        .project-subtitle {
+          font-weight: 300;
+        }
+
+        .project-tags {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.553545cqw;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .project-tags li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: max(24px, 5.37478cqw);
+          padding: 0.863082cqw 1.89878cqw;
+          border: 0.5px solid #858585;
+          border-radius: 999px;
+          font-size: max(10px, 2.934479cqw);
+          font-weight: 400;
+          line-height: 1.294118;
+          color: #565656;
+          text-transform: uppercase;
+        }
+      `}</style>
     </Link>
   );
 }

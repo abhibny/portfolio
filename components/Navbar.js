@@ -45,7 +45,7 @@ export default function Navbar(props) {
   }, [router]);
 
   return (
-    <nav className="text-white body grid-layout sticky top-0 z-[100] bg-black py-4 border-solid border-b border-white/20">
+    <nav className={`text-white body grid-layout sticky top-0 z-[100] bg-black py-4 border-solid border-b border-white/20 ${router.pathname === '/' ? 'home-navbar' : ''}`}>
       {/* logo */}
       <Link
         className="col-span-4 col-start-1 hover:text-[#4C5BFF]"
@@ -60,14 +60,14 @@ export default function Navbar(props) {
         ⟶
       </p>
 
-      <p className="col-span-6 md:col-start-7 lg:col-start-7 md:col-span-3 lg:col-span-2">
+      <p className="whitespace-nowrap col-span-6 md:col-start-7 lg:col-start-7 md:col-span-3 lg:col-span-2">
         <Link className="hover:text-[#4C5BFF] mr-2" passHref href="/art">
           [ART]
         </Link>
         Artist / Designer
       </p>
-      <p className="hidden col-span-3 lg:inline md:col-start-10 lg:col-start-10">
-        Mumbai, India
+      <p className="navbar-location hidden col-span-3 lg:inline md:col-start-10 lg:col-start-10">
+        Bangalore / Japan
       </p>
       {pageName !== '/' && (
         <div className="absolute right-0 flex justify-end col-start-12 top-[50%] translate-y-[-50%] ">
@@ -89,6 +89,25 @@ export default function Navbar(props) {
           </Link>
         </div>
       )}
+      <style jsx>{`
+        .home-navbar {
+          width: 56.448412vw;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .home-navbar .navbar-location {
+          text-align: right;
+          justify-self: end;
+        }
+
+        @media (max-width: 767px) {
+          .home-navbar {
+            width: 100%;
+            max-width: 440px;
+          }
+        }
+      `}</style>
     </nav>
   );
 }

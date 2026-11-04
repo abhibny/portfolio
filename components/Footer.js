@@ -6,7 +6,7 @@ const GLOBAL_SPACING = 'text-padding pb-10 pt-6 md:pb-10 md:pt-8';
 const BREAKPOINT = 'col-start-1 col-end-13';
 
 export default function Footer() {
-  const pageName = useRouter().asPath;
+  const isHome = useRouter().pathname === '/';
   const [updatedTime, setUpdatedTime] = useState('...');
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Footer() {
     <footer
       className={`flex flex-col items-center body bg-black dot-grid z-[1] w-full text-zinc-100`}
     >
-      <GridContainer className="gap-y-8" footerSpacing={GLOBAL_SPACING}>
+      <GridContainer className={`gap-y-8 ${isHome ? 'home-footer-grid' : ''}`} footerSpacing={GLOBAL_SPACING}>
         
         <div
           className={`flex-col space-y-2 ${BREAKPOINT} caption md:col-start-1 md:col-end-6`}
@@ -42,24 +42,11 @@ export default function Footer() {
         </div>
 
         <span
-          className={`flex flex-col space-y-1 ${BREAKPOINT} md:col-start-7 md:col-end-9`}
+          className={`footer-links flex flex-col space-y-1 ${BREAKPOINT} md:col-start-7 md:col-end-9`}
         >
-          <p>
-            <TextLink link="/v5" sameTab>
-              New site
-            </TextLink>
-          </p>
-          <p>
-            <TextLink link="/abhishek-benny-resume.pdf">Resume</TextLink>
-          </p>
           <p>
             <TextLink link="https://www.linkedin.com/in/abhibny/">
               LinkedIn
-            </TextLink>
-          </p>
-          <p>
-            <TextLink link="https://www.instagram.com/greeenpoints/">
-              Instagram
             </TextLink>
           </p>
           <p>
@@ -68,7 +55,7 @@ export default function Footer() {
             </TextLink>
           </p>
         </span>
-  <div className={`flex flex-col space-y-1 ${BREAKPOINT} md:col-start-9 md:col-span-4 lg:col-start-9 lg:col-span-4`}>
+  <div className={`footer-email flex flex-col space-y-1 ${BREAKPOINT} md:col-start-9 md:col-span-4 lg:col-start-9 lg:col-span-4`}>
           <span>
             <TextLink link="mailto:abhishekbenny98@gmail.com">
               {`abhishekbenny98@gmail.com`}
@@ -76,6 +63,45 @@ export default function Footer() {
           </span>
         </div>
       </GridContainer>
+      <style jsx>{`
+        /* Match the homepage collection's width and column gap exactly. */
+        :global(.home-footer-grid) {
+          width: 56.448412vw;
+          max-width: none;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 24px;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-gap: 1.143762vw;
+        }
+
+        :global(.home-footer-grid) > div:first-child {
+          display: none;
+        }
+
+        :global(.home-footer-grid) .footer-links {
+          grid-column: 1;
+        }
+
+        :global(.home-footer-grid) .footer-email {
+          grid-column: 2;
+          min-width: 0;
+          overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 767px) {
+          :global(.home-footer-grid) {
+            width: calc(100% - 32px);
+            max-width: 440px;
+            grid-template-columns: minmax(0, 1fr);
+          }
+
+          :global(.home-footer-grid) .footer-email {
+            grid-column: 1;
+          }
+        }
+      `}</style>
     </footer>
   );
 }
