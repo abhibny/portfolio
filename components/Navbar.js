@@ -44,8 +44,10 @@ export default function Navbar(props) {
     };
   }, [router]);
 
+  const isArt = router.pathname === '/art';
+
   return (
-    <nav className={`text-white body grid-layout sticky top-0 z-[100] bg-black py-4 border-solid border-b border-white/20 ${['/', '/art'].includes(router.pathname) ? 'home-navbar' : ''}`}>
+    <nav className={`body grid-layout sticky top-0 z-[100] py-4 border-solid border-b ${isArt ? 'bg-white text-black border-black/20' : 'bg-black text-white border-white/20'} ${['/', '/art'].includes(router.pathname) ? 'home-navbar' : ''}`}>
       {/* logo */}
       <Link
         className="col-span-4 col-start-1 hover:text-[#4C5BFF]"
@@ -55,6 +57,7 @@ export default function Navbar(props) {
         <h1 className="">अभिषेक बेन्नी</h1>
       </Link>
 
+      {!isArt && <>
       {/* Arrow aligned to end of column 2 */}
       <p className="hidden md:block col-start-6 col-span-1 justify-self-end text-yellow-300">
         ⟶
@@ -68,9 +71,10 @@ export default function Navbar(props) {
       <p className="navbar-location hidden col-span-3 lg:inline md:col-start-10 lg:col-start-10">
         Bangalore / Japan
       </p>
+      </>}
       {pageName !== '/' && (
         <div className="absolute right-0 flex justify-end col-start-12 top-[50%] translate-y-[-50%] ">
-          <Link className="" passHref href="/">
+          <Link aria-label="Close and return home" className="" passHref href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

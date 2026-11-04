@@ -19,7 +19,6 @@ export default function Art() {
         <section className="art-content-width art-intro" aria-label="About the art collection">
           <div>
             <h1 className="h1">Art</h1>
-            <p className="caption text-zinc-500">Personal practice</p>
           </div>
           <p className="body font-normal text-zinc-300">
           A running archive of personal work — image, form and material.
@@ -50,6 +49,7 @@ export default function Art() {
         </section>
       </GridContainer>
       <style jsx>{`
+        .art-intro p { color: #000; }
         .art-content-width {
           grid-column: 1 / -1;
           width: 56.448412vw;
@@ -59,18 +59,18 @@ export default function Art() {
         .art-intro {
           display: flex;
           flex-direction: column;
-          gap: 48px;
-          margin-top: 48px;
+          gap: 16px;
+          margin-top: 32px;
         }
         .project-collection {
-          margin: 64px auto 24px;
+          margin: 24px auto 24px;
           padding: 1.679361vw 0;
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           align-items: start;
           column-gap: 1.143762vw;
-          border-top: 1px solid rgba(255, 255, 255, 0.2);
-          background: #000;
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          background: #fff;
         }
         .project-column {
           display: flex;
@@ -83,11 +83,11 @@ export default function Art() {
         .project-tile :global(a:focus-visible) { outline: 2px solid #f6e452; outline-offset: 6px; }
         @media (max-width: 767px) {
           .art-content-width { width: 100%; max-width: 440px; }
-          .art-intro { margin-top: 32px; gap: 36px; }
+          .art-intro { margin-top: 24px; gap: 12px; }
           .project-column { display: contents; }
           .project-collection {
             grid-template-columns: minmax(0, 1fr);
-            margin: 32px auto 24px;
+            margin: 24px auto 24px;
             padding: 16px 0;
             gap: 28px;
           }

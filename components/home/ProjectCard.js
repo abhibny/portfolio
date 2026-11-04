@@ -90,7 +90,7 @@ export default function ProjectCard({ isVideo = false, ...props }) {
           width: 63%;
           font-size: max(12px, 3.279711cqw);
           line-height: 1.315789;
-          color: #fff;
+          color: var(--project-heading-color, #fff);
           overflow-wrap: anywhere;
         }
 

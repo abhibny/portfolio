@@ -7,9 +7,10 @@ const BREAKPOINT = 'col-start-1 col-end-13';
 
 export default function Footer() {
   const isHome = ['/', '/art'].includes(useRouter().pathname);
+  const isArt = useRouter().pathname === '/art';
   return (  
     <footer
-      className={`flex flex-col items-center body bg-black dot-grid z-[1] w-full text-zinc-100`}
+      className={`flex flex-col items-center body ${isArt ? 'art-footer bg-white text-black' : 'bg-black dot-grid text-zinc-100'} z-[1] w-full`}
     >
       <GridContainer className={`gap-y-8 ${isHome ? 'home-footer-grid' : ''}`} footerSpacing={GLOBAL_SPACING}>
 
@@ -42,6 +43,7 @@ export default function Footer() {
         </div>
       </GridContainer>
       <style jsx>{`
+        .art-footer :global(.home-footer-grid) { border-color: rgba(0, 0, 0, 0.2); }
         footer {
           font-size: 12px;
           font-weight: 400;
