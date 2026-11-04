@@ -57,15 +57,16 @@ export default function Bookworm() {
           duration="2019"
           tools={['Grasshopper', 'Rhino 3D']}
         />
+        <div className="publication-links col-start-1 md:col-start-5 col-end-13">
         <LinkCard
-          col={1}
           link="https://www.dezeen.com/2019/12/26/wooden-book-worm-nudes-pavilion-architecture-mumbai/"
         >
           BookWorm on Dezeen
         </LinkCard>
-        <LinkCard col={2} link="https://www.archdaily.com/965307/bookworm-pavilion-nudes">
+        <LinkCard link="https://www.archdaily.com/965307/bookworm-pavilion-nudes">
           {`BookWorm on ArchDaily`}
         </LinkCard>
+        </div>
         <Spacer />
         <ProjectBody title="Design Process">
         The  {' '}
@@ -111,6 +112,22 @@ export default function Bookworm() {
         <ProjectMedia noShadow pAll src={MobileMail1} />
         <ProjectMedia src={MobileMail2} />
       </GridContainer>
+      <style jsx>{`
+        .publication-links {
+          display: flex;
+          gap: 12px;
+          min-width: 0;
+        }
+        .publication-links :global(a) {
+          flex: 1 1 0;
+          min-width: 0;
+          justify-content: center;
+          white-space: nowrap;
+          padding: 12px 8px;
+          font-size: clamp(8px, 1.7vw, 11.5px);
+          letter-spacing: 0.02em;
+        }
+      `}</style>
     </motion.main>
   );
 }
