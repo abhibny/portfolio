@@ -1,44 +1,22 @@
 import GridContainer from './GridContainer';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import TextLink from './TextLink';
 import { useRouter } from 'next/router';
 const GLOBAL_SPACING = 'text-padding pb-10 pt-6 md:pb-10 md:pt-8';
 const BREAKPOINT = 'col-start-1 col-end-13';
 
 export default function Footer() {
-  const isHome = useRouter().pathname === '/';
-  const [updatedTime, setUpdatedTime] = useState('...');
-
-  useEffect(() => {
-    fetch(
-      'https://api.github.com/repos/josephz-me/portfolio-v4/commits?per_page=1'
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        setUpdatedTime(res[0].commit.author.date);
-      });
-  }, []);
-
+  const isHome = ['/', '/art'].includes(useRouter().pathname);
   return (  
     <footer
       className={`flex flex-col items-center body bg-black dot-grid z-[1] w-full text-zinc-100`}
     >
       <GridContainer className={`gap-y-8 ${isHome ? 'home-footer-grid' : ''}`} footerSpacing={GLOBAL_SPACING}>
-        
+
         <div
           className={`flex-col space-y-2 ${BREAKPOINT} caption md:col-start-1 md:col-end-6`}
         >
-          {/*<span className="flex flex-row space-x-2 align-middle">
-            <p className="self-center w-min px-2 pt-1 pb-[2px] mono lowercase text-yellow-300 border-yellow-300 border border-solid rounded-full">
-              v4.3.0
-            </p>
-            <p className="self-center px-2 pt-1 pb-[2px] mono uppercase text-zinc-600">
-              {`Last updated ${updatedTime.substring(
-                0,
-                updatedTime.indexOf('T')
-              )}`}{' '}
-            </p>
-          </span>*/}
+
         </div>
 
         <span
@@ -64,6 +42,12 @@ export default function Footer() {
         </div>
       </GridContainer>
       <style jsx>{`
+        footer {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+
         /* Match the homepage collection's width and column gap exactly. */
         :global(.home-footer-grid) {
           width: 56.448412vw;

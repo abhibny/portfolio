@@ -1,5 +1,17 @@
 # Provenance audit
 
+## Correction after visual verification, 2026-11-04
+
+The filename-based asset conclusions below were too broad. Visual inspection of
+the files at `a7a1ae5^` confirmed that `skiff.jpg` and the images in `work/skiff`
+show BookWorm Pavilion, `123.jpg` shows Neydhal, `plane.jpg` shows Data is the new
+Art, and `aiga.jpg` / `aiga-square.jpg` show the Velammal landscape. These have
+been recovered under project-specific filenames. The NewsScape summary and
+concept images from `work/plane` were also verified and recovered; unrelated
+task-management screenshots were excluded. The City of 2140 video was recovered
+from its historical page reference. Do not replace these restored assets with
+placeholders based on the older classifications below.
+
 Record of which pages were Abhi's and which came from the template, how each was
 decided, and what was done about it. Dated 2026-08-31.
 

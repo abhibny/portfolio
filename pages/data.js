@@ -10,20 +10,20 @@ import ProjectHero from '../components/projects/ProjectHero';
 import ProjectBody from '../components/projects/ProjectBody';
 import ProjectTitle from '../components/projects/ProjectTitle';
 import ProjectDetails from '../components/projects/ProjectDetails';
-import listAssignee from '../public/placeholder.svg';
-import table from '../public/placeholder.svg';
-import kanban from '../public/placeholder.svg';
-import timeline from '../public/placeholder.svg';
-import calendar from '../public/placeholder.svg';
-import displaySort from '../public/placeholder.svg';
-import displayFilter from '../public/placeholder.svg';
-import filters from '../public/placeholder.svg';
+import listAssignee from '../public/work/newsart/summary.jpg';
+
+
+
+
+
+
+import filters from '../public/work/newsart/concept.jpg';
 
 export default function Data() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/placeholder.svg" />
+        <ProjectHero content="/project-covers/newsart.jpg" />
         <ProjectTitle role="Wanna do research in this">Data is the new ART</ProjectTitle>
         <ProjectBody col={2}>
         &ldquo;NewsScape: The World Through Art&ldquo; is an upcoming AI-driven initiative that 
@@ -39,9 +39,6 @@ export default function Data() {
 
         <ProjectMedia noShadow src={listAssignee}></ProjectMedia>
         <ProjectMedia noShadow src={filters}></ProjectMedia>
-        {/*
-        <ProjectMedia noShadow pt pr src={table}></ProjectMedia>
-        */}
       </GridContainer>
     </motion.main>
   );

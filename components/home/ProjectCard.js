@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function ProjectCard({ isVideo = false, ...props }) {
+  const Wrapper = props.link ? Link : 'div';
   return (
-    <Link
+    <Wrapper
       target={props.isExternal ? '_blank' : ''}
       className={`${
         //determine if project is linked
@@ -14,7 +15,7 @@ export default function ProjectCard({ isVideo = false, ...props }) {
       relative w-full opacity-100 inline-block select-none group`}
       passHref
       variants={props.animation}
-      href={`${props.link}`}
+      href={props.link}
     >
       <div className="relative game-border group-hover:opacity-80">
         <Media isVideo={isVideo} src={props.content} responsive />
@@ -126,6 +127,6 @@ export default function ProjectCard({ isVideo = false, ...props }) {
           text-transform: uppercase;
         }
       `}</style>
-    </Link>
+    </Wrapper>
   );
 }

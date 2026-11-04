@@ -11,17 +11,17 @@ import Spacer from '../components/projects/Spacer';
 import LinkCard from '../components/projects/LinkCard';
 
 // images
-import AppSwitcher from '../public/placeholder.svg';
-import Mail from '../public/placeholder.svg';
-import Compose from '../public/placeholder.svg';
-import Icons from '../public/placeholder.svg';
-import MarketingCards from '../public/placeholder.svg';
-import MarketingCards2 from '../public/placeholder.svg';
-import MarketingLanding from '../public/placeholder.svg';
-import AppLogos from '../public/placeholder.svg';
-import Onboarding from '../public/placeholder.svg';
-import MobileMail1 from '../public/placeholder.svg';
-import MobileMail2 from '../public/placeholder.svg';
+import AppSwitcher from '../public/work/bookworm/app-switcher.jpg';
+import Mail from '../public/work/bookworm/mail.jpg';
+import Compose from '../public/work/bookworm/compose-modal.jpg';
+import Icons from '../public/work/bookworm/icons.png';
+import MarketingCards from '../public/work/bookworm/marketing-cards.png';
+import MarketingCards2 from '../public/work/bookworm/marketing-cards-2.jpg';
+import MarketingLanding from '../public/work/bookworm/marketing-landing.jpg';
+import AppLogos from '../public/work/bookworm/app-logos.jpg';
+import Onboarding from '../public/work/bookworm/onboarding.jpg';
+import MobileMail1 from '../public/work/bookworm/mobile-mail-1.png';
+import MobileMail2 from '../public/work/bookworm/mobile-mail-2.png';
 
 export default function Bookworm() {
   return (

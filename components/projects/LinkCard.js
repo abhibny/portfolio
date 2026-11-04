@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function LinkCard(props) {
+  if (!props.link) return <p className="col-span-full caption text-white/80">{props.children}</p>;
   return (
     <Link
       href={props.link}

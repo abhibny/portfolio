@@ -1,4 +1,5 @@
 import ProjectCard from '../components/home/ProjectCard';
+import FellowshipPhotos from '../components/home/FellowshipPhotos';
 import TextLink from '../components/TextLink';
 import GridContainer from '../components/GridContainer';
 import { projects as projectMetadata } from '../data/v5-projects';
@@ -43,26 +44,20 @@ export default function Home() {
               <TextLink link="mailto:abhishekbenny98@gmail.com">connect</TextLink>.
             </p>
           </div>
-          <div>
-            <div className="bg-zinc-900 p-8 border border-zinc-700">
-              <p className="text-white uppercase block mb-6 text-base font-semibold tracking-wide">Currently At</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Left Column - Lab Info */}
-                <div className="text-zinc-300 body font-normal space-y-3">
-                  <span className="block mb-4 text-yellow-300"><TextLink link="https://www.idc.riec.tohoku.ac.jp/en/">Interactive Content Design Lab</TextLink></span>
-                  <span className="block text-sm mb-4">インタラクティブコンテンツ</span>
-                  <span className="block mb-2">Under : Prof. Yoshifumi KITAMURA</span>
-                  <span className="block text-sm">北村 喜文</span>
-                </div>
-                {/* Right Column - Role Info */}
-                <div className="text-zinc-300 body font-normal space-y-3">
-                  <span className="block">As Student Exchange Researcher/ Designer In ICD Lab, Tohoku University Japan</span>
-                  <span className="block"><TextLink link="https://www.jst.go.jp/program/india/en/outline/">India - Japan Lotus Research Fellow</TextLink></span>
-                  <span className="block">Topic : AI In VR ( Files & Data Retrieval )</span>
-                </div>
+          <section className="current-role body font-normal" aria-label="Current research role">
+            <p className="current-role-heading">PREVIOUSLY&nbsp; | &nbsp;As XR Researcher/Designer In ICD Lab, Tohoku, Japan</p>
+            <div className="current-role-details">
+              <FellowshipPhotos />
+              <div>
+                <a href="https://www.icd.riec.tohoku.ac.jp/en/" target="_blank" rel="noopener noreferrer">
+                  <span className="block">Interactive Content Design Lab</span>
+                  <span className="block" lang="ja">インタラクティブコンテンツ</span>
+                </a>
+                <p className="current-role-supervisor">Under : Prof. Yoshifumi KITAMURA</p>
+                <p className="current-role-name" lang="ja">北村　喜文</p>
               </div>
             </div>
-          </div>
+          </section>
 
         </section>
 
@@ -98,6 +93,39 @@ export default function Home() {
           flex-direction: column;
           gap: 48px;
           margin-top: 48px;
+        }
+
+        .current-role {
+          container-type: inline-size;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: 400;
+          line-height: 1.285714;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .current-role p { margin: 0; }
+
+        .current-role-heading {
+          padding: 1.043223vw 0 1.111239vw;
+          background: url('/portfolio/figma/01a/divider-dotted.svg') left bottom / 100% 2px no-repeat;
+        }
+
+        .current-role-details {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-gap: 1.143762vw;
+          padding-top: 0.91692vw;
+          padding-bottom: 2.15913vw;
+        }
+
+        .current-role-supervisor { padding-top: 1.01445vw; }
+        .current-role-name { padding-left: 5.25em; }
+        .current-role a:hover { color: #4c5bff; }
+        .current-role a:focus-visible { outline: 2px solid #4c5bff; outline-offset: 3px; }
+
+        .home-intro + .project-collection {
+          margin-top: 0;
         }
 
         .project-collection {
@@ -153,6 +181,10 @@ export default function Home() {
             margin-top: 32px;
             gap: 36px;
           }
+
+          .current-role-heading { padding: 12px 0; }
+          .current-role-details { grid-template-columns: 1fr; gap: 20px; padding: 12px 0 24px; }
+          .current-role-supervisor { padding-top: 16px; }
 
           .project-column {
             display: contents;

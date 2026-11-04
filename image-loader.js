@@ -13,8 +13,9 @@
 const BASE_PATH = '/portfolio';
 
 module.exports = function imageLoader({ src }) {
-  // Remote images (isbndb, amazon) are absolute — leave them alone.
-  if (/^https?:\/\//.test(src) || src.startsWith('data:')) return src;
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(src)) {
+    throw new Error('Only local image paths are supported.');
+  }
   // Already prefixed (e.g. a src authored with the basePath baked in).
   if (src === BASE_PATH || src.startsWith(`${BASE_PATH}/`)) return src;
   return `${BASE_PATH}${src.startsWith('/') ? '' : '/'}${src}`;

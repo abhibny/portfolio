@@ -45,7 +45,7 @@ export default function Navbar(props) {
   }, [router]);
 
   return (
-    <nav className={`text-white body grid-layout sticky top-0 z-[100] bg-black py-4 border-solid border-b border-white/20 ${router.pathname === '/' ? 'home-navbar' : ''}`}>
+    <nav className={`text-white body grid-layout sticky top-0 z-[100] bg-black py-4 border-solid border-b border-white/20 ${['/', '/art'].includes(router.pathname) ? 'home-navbar' : ''}`}>
       {/* logo */}
       <Link
         className="col-span-4 col-start-1 hover:text-[#4C5BFF]"
@@ -61,10 +61,9 @@ export default function Navbar(props) {
       </p>
 
       <p className="whitespace-nowrap col-span-6 md:col-start-7 lg:col-start-7 md:col-span-3 lg:col-span-2">
-        <Link className="hover:text-[#4C5BFF] mr-2" passHref href="/art">
-          [ART]
+        <Link className="hover:text-[#4C5BFF]" passHref href="/art">
+          [ART] Artist / Designer
         </Link>
-        Artist / Designer
       </p>
       <p className="navbar-location hidden col-span-3 lg:inline md:col-start-10 lg:col-start-10">
         Bangalore / Japan

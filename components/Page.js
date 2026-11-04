@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { useRouter } from 'next/router';
 
 export default function Page(props) {
-  const isHome = useRouter().pathname === '/';
+  const isHome = ['/', '/art'].includes(useRouter().pathname);
   return (
     <>
       <div className="w-full flex items-center flex-col z-[200]">

@@ -4,10 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/liy8bpw.css" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={`default-src 'self'; script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''}; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; connect-src 'self'; frame-src 'none'; object-src 'none'; form-action 'none'; base-uri 'self'`}
         />
       </Head>
       <body>

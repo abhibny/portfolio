@@ -6,7 +6,6 @@ import ProjectHero from '../components/projects/ProjectHero';
 import ProjectBody from '../components/projects/ProjectBody';
 import ProjectMedia from '../components/projects/ProjectMedia';
 import ProjectTitle from '../components/projects/ProjectTitle';
-import ExternalVideo from '../components/projects/ExternalVideo';
 import Spacer from '../components/projects/Spacer';
 import LinkCard from '../components/projects/LinkCard';
 import Link from 'next/link';
@@ -48,7 +47,7 @@ export default function Velammal() {
   return (
     <main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero isVideo={false} content="/placeholder.svg" />
+        <ProjectHero content="/work/velammal/landscape.jpg" />
         <ProjectTitle role="Architectural Modularity">
           Velammal Project
         </ProjectTitle>

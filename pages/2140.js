@@ -10,7 +10,6 @@ import ProjectHero from '../components/projects/ProjectHero';
 import ProjectBody from '../components/projects/ProjectBody';
 import ProjectMedia from '../components/projects/ProjectMedia';
 import ProjectTitle from '../components/projects/ProjectTitle';
-import ExternalVideo from '../components/projects/ExternalVideo';
 import LinkCard from '../components/projects/LinkCard';
 import Link from 'next/link';
 import ProjectDetails from '../components/projects/ProjectDetails';
@@ -52,7 +51,7 @@ export default function Home() {
   return (
     <motion.main className="min-h-[70vh]">
       <GridContainer>
-        <ProjectHero content="/placeholder.svg" />
+        <ProjectHero isVideo content="/work/2140/city.mp4" />
         <ProjectTitle role="Architectural Thesis Project">City of 2140 : New York</ProjectTitle>
         <ProjectBody col={2}>
         Inspired by Kim Stanley Robinson’s New York 2140, this project reimagines 
@@ -80,7 +79,6 @@ export default function Home() {
         >
           View complete documentation
         </LinkCard>
-        <ExternalVideo url="https://player.vimeo.com/video/704621543?h=5407db28dd&title=0&byline=0&portrait=0"></ExternalVideo>
         */}
       </GridContainer>
     </motion.main>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useState, useRef, useEffect } from 'react';
 import * as loadingCopy from './loadingCopy';
 import Preloader from './Preloader';
+import localAssetPath from '../image-loader';
 
 const bgColors = {
   skiff: ['bg-gray-200', 'bg-[#4F4C59]'],
@@ -66,7 +67,7 @@ export default function ProjectMedia(props) {
             loop
             autoPlay
             muted
-            src={props.src}
+            src={localAssetPath({ src: props.src })}
             onCanPlay={handleContentLoad}
             onLoadedMetadata={handleVideoMetadataLoaded}
           />
@@ -74,8 +75,11 @@ export default function ProjectMedia(props) {
           <Image
             alt="project hero"
             className="overflow-hidden"
-            layout={props.responsive ? 'responsive' : 'fill'}
-            objectFit="cover"
+            {...(props.responsive
+              ? { width: props.src?.width || 1280, height: props.src?.height || 720 }
+              : { fill: true })}
+            style={props.responsive ? { width: '100%', height: 'auto', objectFit: 'cover' } : { objectFit: 'cover' }}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             src={props.src}
             priority
             onLoadingComplete={handleContentLoad}

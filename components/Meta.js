@@ -20,7 +20,6 @@ function Meta() {
 
       {/* Open Graph/FB */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://metatags.io/" />
       <meta property="og:title" content="Abhishek Benny – Artist / Designer" />
 
       <meta
@@ -31,7 +30,6 @@ function Meta() {
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://metatags.io/" />
       <meta
         property="twitter:title"
         content="Abhishek Benny – Artist / Designer"

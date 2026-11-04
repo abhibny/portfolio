@@ -1,4 +1,5 @@
 export default function TextLink(props) {
+  if (!props.link) return <span>{props.children}</span>;
   return (
     <>
       <a

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: process.env.NEXT_BUILD_DIR || '.next',
   reactStrictMode: false,
 
   output: 'export',
@@ -12,7 +13,6 @@ const nextConfig = {
   images: {
     loader: "custom",
     loaderFile: "./image-loader.js",
-    domains: ["images.isbndb.com", "m.media-amazon.com"],
   },
 };
 
